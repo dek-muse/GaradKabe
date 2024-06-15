@@ -15,7 +15,7 @@ mongoose.connect(
     process.env.MONGO
 )
 .then(
-    () => {console.log('abdirahmaan database is connecting ')}
+    () => {console.log('abdirahmaan database is connecting')}
 )
 .catch((err) => {
     console.log(err);
