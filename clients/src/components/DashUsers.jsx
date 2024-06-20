@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Modal, Table, Button } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -28,6 +29,7 @@ const DashUsers = () => {
     if (currentUser.isAdmin) {
       fetchUsers();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUser._id]);
 
   const handleShowMore = async () => {

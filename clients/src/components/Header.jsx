@@ -68,7 +68,7 @@ export default function Header() {
         <Button className='w-12 h-10 lg:hidden' color='gray' pill >
             <AiOutlineSearch />
         </Button>
-        <div className="flex gap-2 md:order-2">
+        <div className="flex gap-3 md:order-2">
             <Button className='w-12 h-10 hidden sm:inline' color='gray' pill onClick={() => dispatch(toggleTheme())}>
             {theme === 'light' ? <FaSun /> : <FaMoon />}
             </Button>
@@ -102,6 +102,7 @@ export default function Header() {
             
             <Navbar.Toggle />
         </div>
+
         <Navbar.Collapse>
                 <Navbar.Link active={path === "/"} as={'div'}>
                     <Link to='/'>
@@ -113,11 +114,11 @@ export default function Header() {
                         About
                     </Link>
                 </Navbar.Link>
-                {/* <Navbar.Link active={path === "/Projects"} as={'div'}>
-                    <Link to='/Projects'>
-                    Projects
+                <Navbar.Link active={path === "/Contact"} as={'div'}>
+                    <Link to='/Contact'>
+                    Contact
                     </Link>
-                </Navbar.Link> */}
+                </Navbar.Link>
             </Navbar.Collapse>
      </Navbar>
     </>

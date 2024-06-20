@@ -53,7 +53,7 @@ const Search = () => {
       }
     };
     fetchPosts();
-  }, [location.search]);
+  }, [location.search, sidebarData]);
 
   const handleChange = (e) => {
     if (e.target.id === 'searchTerm') {
@@ -130,10 +130,10 @@ const Search = () => {
               id='category'
             >
               <option value='uncategorized'>Uncategorized</option>
-              <option value='guulaha'>guulaha</option>
-              <option value='sheekoyinka'>sheekoyinka</option>
-              <option value='dhiiri galin'>dhiiri galin</option>
-              <option value='ciyaaraha'>ciyaaraha</option>
+              <option value='guulaha'>Guulaha</option>
+              <option value='sheekoyinka'>Sheekoyinka</option>
+              <option value='dhiiri galin'>Dhiiri galin</option>
+              <option value='ciyaaraha'>Ciyaaraha</option>
             </Select>
           </div>
           <Button type='submit' outline gradientDuoTone='purpleToPink'>

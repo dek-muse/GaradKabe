@@ -1,75 +1,84 @@
-import { Footer } from 'flowbite-react';
 import { Link } from 'react-router-dom';
-import { BsFacebook, BsInstagram, BsTwitter, BsDribbble, BsTelegram } from 'react-icons/bs';
+import { BsFacebook, BsTelegram, BsTwitter, BsInstagram, BsYoutube } from 'react-icons/bs';
 import logo from '../assets/logo.png';
+
 export default function FooterCom() {
   return (
-    <Footer container className='border border-t-8 border-teal-500'>
-      <div className='w-full max-w-7xl mx-auto'>
-        <div className='grid w-full justify-between sm:flex md:grid-cols-1'>
-          <div className='mt-5 '>
-          <Link to="/" className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
-          <img src={logo} alt="logo" className='w-[70px]'/>
-        </Link>
+    <footer className="bg-gray-800 text-white py-8">
+      <div className="w-full max-w-7xl mx-auto px-4">
+        <div className="flex flex-wrap justify-between mb-6">
+          <div className="w-full sm:w-auto mb-6 sm:mb-0">
+            <Link to="/" className="flex flex-col items-start text-left">
+              <img src={logo} alt="logo" className="w-16 mb-2" />
+              <span className="text-sm sm:text-lg">SAHAN</span>
+            </Link>
           </div>
-          <div className='grid grid-cols-2 gap-8 mt-4 sm:grid-cols-3 sm:gap-6'>
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 text-sm">
             <div>
-              <Footer.Title title='About' />
-              <Footer.LinkGroup col>
-                <Footer.Link
-                  href='/about'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Maan-hage
-                </Footer.Link>
-              </Footer.LinkGroup>
+              <p className="font-semibold">WEEKLY </p>
+              <FooterLink href="#" label="Pre-Sale FAQs" />
+              <FooterLink href="#" label="Submit a Ticket" />
+            </div>
+             
+            <div>
+              <p className="font-semibold uppercase">Securety</p>
+              <FooterLink href="./Termes" label="Termes" />
+              <FooterLink href="./Privice" label="Privice" />
             </div>
             <div>
-              <Footer.Title title='Follow us' />
-              <Footer.LinkGroup col>
-                <Footer.Link
-                  href='https://www.facebook.com/profile.php?id=100076266803616 '
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Facebook
-                </Footer.Link>
-                <Footer.Link
-                  href='https://t.me/AqlizameH'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Telegram
-                </Footer.Link>
-                {/* <Footer.Link href='#'>Instagram</Footer.Link> */}
-              </Footer.LinkGroup>
+              <p className="font-semibold">ABOUT US</p>
+              <FooterLink href="./contact" label="Contact Us" />
+              <FooterLink href="./About" label="About" />
+              <FooterLink href="#" label="Resources" />
             </div>
-            {/* <div>
-              <Footer.Title title='Legal' />
-              <Footer.LinkGroup col>
-                <Footer.Link href='#'>Privacy Policy</Footer.Link>
-                <Footer.Link href='#'>Terms &amp; Conditions</Footer.Link>
-              </Footer.LinkGroup>
-            </div> */}
           </div>
         </div>
-        <Footer.Divider />
-        <div className='w-full sm:flex sm:items-center sm:justify-between'>
-          <Footer.Copyright
-            href='#'
-            by="Maan-hage"
-            year={new Date().getFullYear()}
-          />
-          <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
-            <Footer.Icon href='https://www.facebook.com/profile.php?id=100076266803616 ' icon={BsFacebook}/>
-            <Footer.Icon href='https://t.me/AqlizameH' icon={BsTelegram}/>
-            {/* <Footer.Icon href='#' icon={BsTwitter}/>
-            <Footer.Icon href='#' icon={BsDribbble}/> */}
-
-          </div>
+        <FooterDivider />
+        <div className="flex justify-center mb-4 space-x-6">
+          <FooterIcon href="https://www.facebook.com/profile.php?id=100076266803616" icon={BsFacebook} />
+          <FooterIcon href="https://t.me/AqlizameH" icon={BsTelegram} />
+          <FooterIcon href="https://twitter.com" icon={BsTwitter} />
+          <FooterIcon href="https://instagram.com" icon={BsInstagram} />
+          <FooterIcon href="https://youtube.com" icon={BsYoutube} />
+        </div>
+        <div className="text-center">
+          <p className="text-sm">&copy; {new Date().getFullYear()} All rights reserved</p>
         </div>
       </div>
-    </Footer>
+    </footer>
+  );
+}
+
+// eslint-disable-next-line react/prop-types
+function FooterIcon({ href, icon: Icon }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white hover:text-gray-400"
+    >
+      <Icon size={24} />
+    </a>
+  );
+}
+
+// eslint-disable-next-line react/prop-types
+function FooterLink({ href, label }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white hover:text-gray-400 block mt-2"
+    >
+      {label}
+    </a>
+  );
+}
+
+function FooterDivider() {
+  return (
+    <div className="border-t border-gray-700 my-6"></div>
   );
 }

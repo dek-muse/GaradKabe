@@ -30,7 +30,8 @@ const OAuth = () => {
                 navigate('/')
             }
         } catch (error) {
-            console.log(error);
+            // console.log(error);
+            return;
         }
     } 
   return (

@@ -1,11 +1,11 @@
 {
   "name": "blog",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "mern stack bloging",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon api/index.js",
+    "dev": "nodemon client",
     "start": "node api/index.js",
     "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
