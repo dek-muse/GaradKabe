@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BsFacebook, BsTelegram, BsTwitter, BsInstagram, BsYoutube } from 'react-icons/bs';
+import { BsFacebook, BsTelegram,  BsWhatsapp } from 'react-icons/bs';
 import logo from '../assets/logo.png';
 
 export default function FooterCom() {
@@ -10,22 +10,18 @@ export default function FooterCom() {
           <div className="w-full sm:w-auto mb-6 sm:mb-0">
             <Link to="/" className="flex flex-col items-start text-left">
               <img src={logo} alt="logo" className="w-16 mb-2" />
-              <span className="text-sm sm:text-lg">SAHAN</span>
+              <span className="text-sm sm:text-lg uppercase">Garaad Kabe</span>
             </Link>
           </div>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 text-sm">
-            <div>
-              <p className="font-semibold">WEEKLY </p>
-              <FooterLink href="#" label="Pre-Sale FAQs" />
-              <FooterLink href="#" label="Submit a Ticket" />
-            </div>
              
-            <div>
+             
+            {/* <div>
               <p className="font-semibold uppercase">Securety</p>
               <FooterLink href="./Termes" label="Termes" />
               <FooterLink href="./Privice" label="Privice" />
-            </div>
-            <div>
+            </div> */}
+            <div className=' mr-24'>
               <p className="font-semibold">ABOUT US</p>
               <FooterLink href="./contact" label="Contact Us" />
               <FooterLink href="./About" label="About" />
@@ -35,11 +31,9 @@ export default function FooterCom() {
         </div>
         <FooterDivider />
         <div className="flex justify-center mb-4 space-x-6">
-          <FooterIcon href="https://www.facebook.com/profile.php?id=100076266803616" icon={BsFacebook} />
-          <FooterIcon href="https://t.me/AqlizameH" icon={BsTelegram} />
-          <FooterIcon href="https://twitter.com" icon={BsTwitter} />
-          <FooterIcon href="https://instagram.com" icon={BsInstagram} />
-          <FooterIcon href="https://youtube.com" icon={BsYoutube} />
+          <FooterIcon href="https://www.facebook.com/profile.php?id=100092308092206" icon={BsFacebook} />
+          <FooterIcon href="https://t.me/abdirahamaanhassan" icon={BsTelegram} />
+          <FooterIcon href="https://wa.me/+251915180432" icon={BsWhatsapp} />
         </div>
         <div className="text-center">
           <p className="text-sm">&copy; {new Date().getFullYear()} All rights reserved</p>

@@ -1,7 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import { Button } from 'flowbite-react';
  
-import Sahan from '../assets/Sahan.png'
+ 
+import goal from '../assets/goal.jpg'
+import sotry from '../assets/sotry.jpg'
+import gym from '../assets/gym.jpeg'
+import moti from '../assets/moti.jpg'
 // eslint-disable-next-line no-unused-vars
 import { Link } from 'react-router-dom';
 
@@ -20,19 +24,19 @@ const CallToAction = () => {
             </Button> */}
   
             <div className="p-7 flex-1">
-    <img src={Sahan} className='w-96 ml-18 rounded-lg'/>
+    <img src={goal} className='w-96 ml-18 rounded-lg'/>
     </div>
  
             <div className="p-7 flex-1">
-    <img src={Sahan} className='w-96 ml-18 rounded-lg'/>
+    <img src={sotry} className='w-96 ml-18 rounded-lg'/>
     </div>
  
             <div className="p-7 flex-1">
-    <img src={Sahan} className='w-96 ml-18 rounded-lg'/>
+    <img src={gym} className='w-96 ml-18 rounded-lg'/>
     </div>
  
             <div className="p-7 flex-1">
-    <img src={Sahan} className='w-96 ml-18 rounded-lg'/>
+    <img src={moti} className='w-96 ml-18 rounded-lg'/>
     </div>
  
 

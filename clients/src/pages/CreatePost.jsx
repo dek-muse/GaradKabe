@@ -127,10 +127,10 @@ const CreatePost = () => {
             onChange={(e) => updateFormData('category', e.target.value)}
           >
             <option value='uncategorized'>Select a category</option>
-            <option value='guulaha'>Guulaha</option>
-            <option value='sheekoyinka'>Sheekoyinka</option>
-            <option value='dhiiri galin'>Dhiiri galin</option>
-            <option value='ciyaaraha'>Ciyaaraha</option>
+            <option value='Dhirigalin'>Dhirigalin</option>
+            <option value='jidhiska'>jidhiska</option>
+            <option value='Sheekoyinka'>Sheekoyinka</option>
+            <option value='guulaha'>guulaha</option>
           </Select>
         </div>
         <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
