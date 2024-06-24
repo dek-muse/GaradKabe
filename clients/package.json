@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
+"scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm install && npm run build-client",
+    "build-client": "npm install --prefix client && npm run build --prefix client",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -15,6 +16,7 @@
     "flowbite-react": "^0.7.2",
     "framer-motion": "^11.2.11",
     "moment": "^2.30.1",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",

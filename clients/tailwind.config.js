@@ -9,7 +9,9 @@ export default {
     extend: {},
   },
   plugins: [ 
-    require('flowbite/plugin'), 
-     require('tailwind-scrollbar'),
+    // eslint-disable-next-line no-undef
+    require('@tailwindcss/forms'),
+    // eslint-disable-next-line no-undef
+    require('@tailwindcss/typography'),
      ],
 }

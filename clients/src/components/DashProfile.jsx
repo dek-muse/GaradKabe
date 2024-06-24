@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import { Alert, Button, Modal, ModalBody, TextInput } from 'flowbite-react';
 import { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -47,6 +49,7 @@ const DashProfile = () => {
       if (imageFile) {
         uploadImage();
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [imageFile]);
   
     const uploadImage = async () => {

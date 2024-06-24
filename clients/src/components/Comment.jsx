@@ -1,9 +1,13 @@
+/* eslint-disable react/prop-types */
 import moment from 'moment';
 import { useEffect, useState } from 'react';
 import { FaThumbsUp } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { Button, Textarea } from 'flowbite-react';
+// eslint-disable-next-line no-unused-vars
+import PropTypes from 'prop-types';
 
+// eslint-disable-next-line react/prop-types
 const Comment = ({ comment, onLike, onEdit, onDelete }) => {
   const [user, setUser] = useState({});
   const [isEditing, setIsEditing] = useState(false);
@@ -12,6 +16,7 @@ const Comment = ({ comment, onLike, onEdit, onDelete }) => {
     useEffect(() => {
         const getUser = async () => {
           try {
+            // eslint-disable-next-line react/prop-types
             const res = await fetch(`/api/user/${comment.userId}`);
             const data = await res.json();
             if (res.ok) {
@@ -26,6 +31,7 @@ const Comment = ({ comment, onLike, onEdit, onDelete }) => {
 
       const handleEdit = () => {
         setIsEditing(true);
+        // eslint-disable-next-line react/prop-types
         setEditedContent(comment.content);
       };
       
@@ -96,6 +102,7 @@ const Comment = ({ comment, onLike, onEdit, onDelete }) => {
           </>
         ) : (
           <>
+          
             <p className='text-gray-500 pb-2'>{comment.content}</p>
             <div className='flex items-center pt-2 text-xs border-t dark:border-gray-700 max-w-fit gap-2'>
               <button

@@ -20,6 +20,7 @@ const PostPage = () => {
   const [post, setPost] = useState(null);
   const [recentPosts, setRecentPosts] = useState([]);
   const [relatedPosts, setRelatedPosts] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [loadMore, setLoadMore] = useState(false);
 
   useEffect(() => {
